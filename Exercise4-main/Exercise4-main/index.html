@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweeties Dream</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>Sweeties Dream</h1>  
+    </header>
+
+    <section id="menu">
+        <h2>Bake Product's</h2>
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <img src="Picture/cake.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <img src="Picture/Fresh Croissant.jpg" alt="Fresh Croissant">
+                <h3>Fresh Croissant</h3>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <img src="Picture/Assorted Cookies.jpg" alt="Assorted Cookies">
+                <h3>Assorted Cookies</h3>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <img src="Picture/Blueberry Muffins.webp" alt="Blueberry Muffins">
+                <h3>Blueberry Muffins</h3>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <img src="Picture/Cupcakes.jpg" alt="Cupcakes">
+                <h3>Cupcakes</h3>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <img src="Picture/Artisan Bread.jpg" alt="Artisan Bread">
+                <h3>Artisan Bread</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="POST">
+        <form action="feedback.php" method="post">
+            <fieldset>
+                <legend>POST</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="GET">
+        <form action="feedback.php" method="get">
+            <fieldset>
+                <legend>GET</legend>
+                <label for="test">Test Query:</label>
+                <input type="text" id="test" name="test" required>
+                <button type="submit">Send GET Request</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
